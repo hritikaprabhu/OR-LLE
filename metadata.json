@@ -1,0 +1,6 @@
+{
+  "name": "OREL — Luxury Fragrance Atelier",
+  "description": "A personalised luxury fragrance experience for discovering signature scents, formulating bespoke perfumes, and curating custom gift hampers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
