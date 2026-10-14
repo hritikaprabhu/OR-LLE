@@ -4,6 +4,7 @@ import nocturneOudImg from './perfume_nocturne_oud_1791988840340.jpg';
 import fleurSoieImg from './perfume_fleur_soie_1791988840392.jpg';
 import soleilDoreImg from './perfume_soleil_dore_1791988842156.jpg';
 import hamperBespokeImg from './hamper_bespoke_luxury_1791988842618.jpg';
+import cinematicFlaconImg from './orelle_cinematic_flacon_1792003099839.jpg';
 
 export {
   heroPerfumeImg,
@@ -11,4 +12,5 @@ export {
   fleurSoieImg,
   soleilDoreImg,
   hamperBespokeImg,
+  cinematicFlaconImg,
 };

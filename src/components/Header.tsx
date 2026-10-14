@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Sparkles, Compass, FlaskConical, Gift, Ticket } from 'lucide-react';
+import { ShoppingBag, Menu, X, Sparkles, Compass, FlaskConical, Gift, Ticket, Film } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
+  onOpenFilm?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
+export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenFilm }) => {
   const { cart, openCart } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
