@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, Shield, Send, CheckCircle2, Leaf, Clock, HeartHandshake } from 'lucide-react';
+import { fleurSoieImg } from '../assets/images';
 
 export const BrandStory: React.FC = () => {
   const [inquiryName, setInquiryName] = useState('');
@@ -64,7 +65,7 @@ export const BrandStory: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] bg-[#F4F0EA] border border-[#EAE4DC] overflow-hidden shadow-xl">
               <img
-                src="/src/assets/images/perfume_fleur_soie_1791988840392.jpg"
+                src={fleurSoieImg}
                 alt="ORÉLLE Fragrance Lab Bottling in Grasse"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"

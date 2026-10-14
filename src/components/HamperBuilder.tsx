@@ -8,6 +8,7 @@ import {
   HamperComplement,
   Perfume,
 } from '../data/perfumes';
+import { hamperBespokeImg } from '../assets/images';
 import { useCart } from '../context/CartContext';
 
 export const HamperBuilder: React.FC = () => {
@@ -83,7 +84,7 @@ export const HamperBuilder: React.FC = () => {
       title: `${selectedBox.name}`,
       subtitle: `Curated for ${recipientName || 'Someone Special'} (${occasion})`,
       price: totalCost,
-      image: '/src/assets/images/hamper_bespoke_luxury_1791988842618.jpg',
+      image: hamperBespokeImg,
       details: {
         box: selectedBox,
         perfumes: chosenPerfumes.map((p) => ({ name: p.name, size: '50ml' })),
@@ -357,7 +358,7 @@ export const HamperBuilder: React.FC = () => {
               {/* High-res Image of Hamper Suite */}
               <div className="relative aspect-[4/3] bg-[#F4F0EA]">
                 <img
-                  src="/src/assets/images/hamper_bespoke_luxury_1791988842618.jpg"
+                  src={hamperBespokeImg}
                   alt="Bespoke Luxury Gift Hamper"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"

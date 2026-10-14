@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FlaskConical, Check, Sparkles, Sliders, ShieldCheck, Heart, Info, ArrowRight } from 'lucide-react';
 import { FRAGRANCE_NOTES, FragranceNote } from '../data/perfumes';
+import { heroPerfumeImg } from '../assets/images';
 import { useCart } from '../context/CartContext';
 
 export const CustomPerfumeLab: React.FC = () => {
@@ -55,7 +56,7 @@ export const CustomPerfumeLab: React.FC = () => {
       title: customName || 'Bespoke Atelier Flacon',
       subtitle: `${concentration === 'extrait' ? 'Extrait de Parfum (28%)' : 'Eau de Parfum (18%)'} · ${volume}`,
       price: basePrice,
-      image: '/src/assets/images/hero_orel_perfume_1791988839425.jpg',
+      image: heroPerfumeImg,
       details: {
         size: volume,
         engraving: engravedMonogram,

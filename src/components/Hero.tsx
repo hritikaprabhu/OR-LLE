@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Compass, FlaskConical, Gift, Ticket } from 'lucide-react';
+import { heroPerfumeImg } from '../assets/images';
 
 interface HeroProps {
   onNavigate: (tab: string) => void;
@@ -99,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="lg:col-span-6 relative">
             <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden bg-[#F4F0EA] border border-[#EAE4DC] shadow-xl">
               <img
-                src="/src/assets/images/hero_orel_perfume_1791988839425.jpg"
+                src={heroPerfumeImg}
                 alt="ORÉLLE Signature Perfume Bottle on Ivory Travertine"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"

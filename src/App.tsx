@@ -18,6 +18,12 @@ import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
 import { Footer } from './components/Footer';
 import { Perfume, PERFUMES } from './data/perfumes';
+import {
+  heroPerfumeImg,
+  nocturneOudImg,
+  soleilDoreImg,
+  hamperBespokeImg,
+} from './assets/images';
 import { Compass, FlaskConical, Gift, ArrowRight } from 'lucide-react';
 
 function AppContent() {
@@ -79,7 +85,7 @@ function AppContent() {
                     <div className="space-y-4">
                       <div className="aspect-[3/4] bg-white border border-[#EAE4DC] p-2 overflow-hidden shadow-sm">
                         <img
-                          src="/src/assets/images/perfume_nocturne_oud_1791988840340.jpg"
+                          src={nocturneOudImg}
                           alt="Nocturne Oud"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover"
@@ -94,7 +100,7 @@ function AppContent() {
                     <div className="space-y-4 pt-8">
                       <div className="aspect-[3/4] bg-white border border-[#EAE4DC] p-2 overflow-hidden shadow-sm">
                         <img
-                          src="/src/assets/images/perfume_soleil_dore_1791988842156.jpg"
+                          src={soleilDoreImg}
                           alt="Soleil Dore"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover"
@@ -117,7 +123,7 @@ function AppContent() {
                   <div className="lg:col-span-6 order-2 lg:order-1">
                     <div className="aspect-[4/3] bg-[#F4F0EA] border border-[#EAE4DC] overflow-hidden shadow-xl">
                       <img
-                        src="/src/assets/images/hero_orel_perfume_1791988839425.jpg"
+                        src={heroPerfumeImg}
                         alt="Custom Perfume Flacon with Champagne Cap"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover"
@@ -179,7 +185,7 @@ function AppContent() {
                   <div className="lg:col-span-6">
                     <div className="aspect-[4/3] bg-white border border-[#EAE4DC] overflow-hidden shadow-xl">
                       <img
-                        src="/src/assets/images/hamper_bespoke_luxury_1791988842618.jpg"
+                        src={hamperBespokeImg}
                         alt="Bespoke Hamper Gift Box with Gold Card"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover"

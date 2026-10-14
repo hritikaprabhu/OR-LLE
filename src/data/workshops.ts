@@ -1,3 +1,9 @@
+import {
+  heroPerfumeImg,
+  nocturneOudImg,
+  fleurSoieImg,
+} from '../assets/images';
+
 export interface Workshop {
   id: string;
   title: string;
@@ -56,7 +62,7 @@ export const WORKSHOPS: Workshop[] = [
         nextDates: ['Sunday, 1 Nov (11:00 AM)', 'Saturday, 14 Nov (3:00 PM)'],
       },
     ],
-    image: '/src/assets/images/perfume_fleur_soie_1791988840392.jpg',
+    image: fleurSoieImg,
   },
   {
     id: 'royal-oud-sandalwood',
@@ -96,7 +102,7 @@ export const WORKSHOPS: Workshop[] = [
         nextDates: ['Saturday, 21 Nov (4:00 PM)', 'Sunday, 22 Nov (11:00 AM)'],
       },
     ],
-    image: '/src/assets/images/perfume_nocturne_oud_1791988840340.jpg',
+    image: nocturneOudImg,
   },
   {
     id: 'sensory-duet-couples',
@@ -136,6 +142,6 @@ export const WORKSHOPS: Workshop[] = [
         nextDates: ['Saturday, 31 Oct (5:30 PM)', 'Sunday, 15 Nov (5:00 PM)'],
       },
     ],
-    image: '/src/assets/images/hero_orel_perfume_1791988839425.jpg',
+    image: heroPerfumeImg,
   },
 ];

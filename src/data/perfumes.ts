@@ -1,3 +1,10 @@
+import {
+  heroPerfumeImg,
+  nocturneOudImg,
+  fleurSoieImg,
+  soleilDoreImg,
+} from '../assets/images';
+
 export interface Perfume {
   id: string;
   name: string;
@@ -44,7 +51,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Damask Rose', 'Smoked Cedarwood', 'Wild Dark Honey'],
     baseNotes: ['Cambodian Oud', 'Bourbon Vanilla', 'Ambergris'],
     occasions: ['Evening Soirées', 'Date Nights', 'Autumn & Winter Gatherings'],
-    image: '/src/assets/images/perfume_nocturne_oud_1791988840340.jpg',
+    image: nocturneOudImg,
     bestseller: true,
     accentNote: 'Smoked Cambodian Oud',
   },
@@ -68,7 +75,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Jasmine Grandiflorum', 'Grasse Peony', 'Florentine Iris'],
     baseNotes: ['White Cashmere', 'Sheer Musk', 'Blonde Cedar'],
     occasions: ['Daytime Chic', 'Art Exhibitions', 'Spring Celebrations'],
-    image: '/src/assets/images/perfume_fleur_soie_1791988840392.jpg',
+    image: fleurSoieImg,
     bestseller: true,
     accentNote: 'Grasse Jasmine Grandiflorum',
   },
@@ -92,7 +99,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Tuscan Leather Accord', 'Smoked Birch Bark', 'Cade Wood'],
     baseNotes: ['Atlas Cedarwood', 'Labdanum Resin', 'Ambergris'],
     occasions: ['Boardroom & Executive Evenings', 'Black Tie Galas', 'Winter Soirées'],
-    image: '/src/assets/images/perfume_nocturne_oud_1791988840340.jpg',
+    image: nocturneOudImg,
     bestseller: true,
     accentNote: 'Tuscan Saddle Leather',
   },
@@ -116,7 +123,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Neroli Blossom', 'Fig Leaf Accord', 'Sea Salt Spray'],
     baseNotes: ['Solar Amber', 'Golden Vetiver', 'Sun-Bleached Driftwood'],
     occasions: ['Summer Escapes', 'Weekend Brunch', 'Daily Uplift'],
-    image: '/src/assets/images/perfume_soleil_dore_1791988842156.jpg',
+    image: soleilDoreImg,
     accentNote: 'Calabrian Bergamot',
   },
   {
@@ -139,7 +146,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Centifolia Rose de Mai', 'Peony Dew', 'Raspberry Blossom'],
     baseNotes: ['Pink Amber', 'Cashmeran', 'White Musk'],
     occasions: ['Romantic Rendezvous', 'Weddings', 'Chic Cocktail Evenings'],
-    image: '/src/assets/images/perfume_fleur_soie_1791988840392.jpg',
+    image: fleurSoieImg,
     accentNote: 'Centifolia Rose de Mai',
   },
   {
@@ -162,7 +169,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Creamy Orris Butter', 'Milk Fig', 'Violet Leaf'],
     baseNotes: ['Mysore Sandalwood', 'Cashmeran', 'White Amber'],
     occasions: ['Signature Daily Wear', 'Gallery Openings', 'Chic Layering'],
-    image: '/src/assets/images/hero_orel_perfume_1791988839425.jpg',
+    image: heroPerfumeImg,
     bestseller: true,
     accentNote: 'Mysore Sandalwood',
   },
@@ -186,7 +193,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Madagascar Vanilla Caviar', 'Tonka Bean', 'Heliotrope'],
     baseNotes: ['Smoked Birch', 'Salted Caramel', 'Benzoin Resin'],
     occasions: ['Intimate Dinners', 'Winter Nights', 'Celebratory Evenings'],
-    image: '/src/assets/images/perfume_nocturne_oud_1791988840340.jpg',
+    image: nocturneOudImg,
     accentNote: 'Madagascar Bourbon Vanilla',
   },
   {
@@ -209,7 +216,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['White Tea Blossom', 'Bamboo Dew', 'Magnolia'],
     baseNotes: ['Hinoki Wood', 'Haitian Vetiver', 'Clean Linen Musk'],
     occasions: ['Creative Studio Sessions', 'Everyday Elegance', 'Mindful Mornings'],
-    image: '/src/assets/images/perfume_soleil_dore_1791988842156.jpg',
+    image: soleilDoreImg,
     accentNote: 'Ceremonial Uji Matcha',
   },
   {
@@ -232,7 +239,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Kannauj Damascena Rose', 'Madurai Mogra', 'Luminous Neroli'],
     baseNotes: ['Mitti Clay Attar', 'Mysore Sandalwood', 'Golden Ambergris'],
     occasions: ['Grand Festive Evenings', 'Weddings & Soirées', 'Poetic Monsoon Days'],
-    image: '/src/assets/images/perfume_fleur_soie_1791988840392.jpg',
+    image: fleurSoieImg,
     bestseller: true,
     accentNote: 'Kannauj Baked Mitti Attar & Rose',
   },
@@ -256,7 +263,7 @@ export const PERFUMES: Perfume[] = [
     heartNotes: ['Copper-Distilled Ruh Khus', 'Nutmeg Flower', 'Wild Clary Sage'],
     baseNotes: ['Himalayan Smoked Cedar', 'Earthy Patchouli', 'Clean Skin Musk'],
     occasions: ['Signature Daily Luxury', 'Summer Evenings', 'Gentleman’s Black Tie'],
-    image: '/src/assets/images/perfume_nocturne_oud_1791988840340.jpg',
+    image: nocturneOudImg,
     bestseller: true,
     accentNote: 'Copper-Distilled Wild Ruh Khus',
   },
