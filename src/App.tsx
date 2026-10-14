@@ -11,6 +11,7 @@ import { PerfumeCatalog } from './components/PerfumeCatalog';
 import { ScentQuiz } from './components/ScentQuiz';
 import { CustomPerfumeLab } from './components/CustomPerfumeLab';
 import { HamperBuilder } from './components/HamperBuilder';
+import { WorkshopsSection } from './components/WorkshopsSection';
 import { BrandStory } from './components/BrandStory';
 import { ProductModal } from './components/ProductModal';
 import { CartDrawer } from './components/CartDrawer';
@@ -189,6 +190,9 @@ function AppContent() {
               </div>
             </section>
 
+            {/* Perfume Workshops Section */}
+            <WorkshopsSection />
+
             {/* Brand Story Preview & Concierge */}
             <BrandStory />
           </>
@@ -209,6 +213,8 @@ function AppContent() {
         {activeTab === 'perfume-lab' && <CustomPerfumeLab />}
 
         {activeTab === 'hamper-builder' && <HamperBuilder />}
+
+        {activeTab === 'workshops' && <WorkshopsSection />}
 
         {activeTab === 'about' && <BrandStory />}
       </main>

@@ -11,21 +11,22 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
   const { cart, total, discount, clearCart, isGiftWrapped, selectedSamples } = useCart();
 
   const [step, setStep] = useState<'details' | 'confirmation'>('details');
-  const [name, setName] = useState('Helena Dubois');
-  const [email, setEmail] = useState('helena.dubois@example.com');
-  const [phone, setPhone] = useState('+1 (555) 234-8901');
-  const [address, setAddress] = useState('742 Evergreen Terrace');
-  const [city, setCity] = useState('New York');
-  const [postal, setPostal] = useState('10021');
-  const [country, setCountry] = useState('United States');
-  const [paymentMethod, setPaymentMethod] = useState<'card' | 'apple' | 'concierge'>('card');
+  const [name, setName] = useState('Ananya Sharma');
+  const [email, setEmail] = useState('ananya.sharma@example.com');
+  const [phone, setPhone] = useState('+91 98201 44521');
+  const [address, setAddress] = useState('Apt 14B, Altamount Road, Cumballa Hill');
+  const [city, setCity] = useState('Mumbai');
+  const [state, setState] = useState('Maharashtra');
+  const [postal, setPostal] = useState('400026');
+  const [country, setCountry] = useState('India');
+  const [paymentMethod, setPaymentMethod] = useState<'upi' | 'card' | 'netbanking' | 'cod'>('upi');
   const [orderNumber, setOrderNumber] = useState('');
 
   if (!isOpen) return null;
 
   const handlePlaceOrder = (e: React.FormEvent) => {
     e.preventDefault();
-    const generatedOrder = 'ORELLE-' + Math.floor(100000 + Math.random() * 900000);
+    const generatedOrder = 'ORELLE-IND-' + Math.floor(100000 + Math.random() * 900000);
     setOrderNumber(generatedOrder);
     setStep('confirmation');
     clearCart();
@@ -46,7 +47,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
         <div className="p-6 bg-white border-b border-[#EAE4DC] flex items-center justify-between">
           <div>
             <div className="text-[10px] tracking-[0.25em] uppercase text-[#9E8055] font-semibold">
-              Atelier Checkout
+              Atelier Checkout · India
             </div>
             <h2 className="font-serif text-2xl text-[#1C1917] font-normal">
               {step === 'details' ? 'Private Client Details' : 'Order Confirmed'}
@@ -82,7 +83,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 </div>
 
                 <div className="space-y-1">
-                  <label htmlFor="checkout-email-address" className="text-xs font-semibold text-[#1C1917]">Email for Tracking</label>
+                  <label htmlFor="checkout-email-address" className="text-xs font-semibold text-[#1C1917]">Email for Dispatch Alerts</label>
                   <input
                     id="checkout-email-address"
                     type="email"
@@ -95,7 +96,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               </div>
 
               <div className="space-y-1">
-                <label htmlFor="checkout-phone-number" className="text-xs font-semibold text-[#1C1917]">Phone Number</label>
+                <label htmlFor="checkout-phone-number" className="text-xs font-semibold text-[#1C1917]">Mobile Number (for Courier OTP)</label>
                 <input
                   id="checkout-phone-number"
                   type="tel"
@@ -110,11 +111,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
             {/* Delivery destination */}
             <div className="space-y-4 pt-4 border-t border-[#EAE4DC]">
               <span className="text-[11px] tracking-[0.2em] uppercase font-semibold text-[#1C1917] block">
-                02. White-Glove Delivery Address
+                02. Pan-India Delivery Address
               </span>
 
               <div className="space-y-1">
-                <label htmlFor="checkout-street-address" className="text-xs font-semibold text-[#1C1917]">Street Address</label>
+                <label htmlFor="checkout-street-address" className="text-xs font-semibold text-[#1C1917]">Street Address / Apartment / Landmark</label>
                 <input
                   id="checkout-street-address"
                   type="text"
@@ -125,7 +126,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 />
               </div>
 
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="space-y-1">
                   <label htmlFor="checkout-city" className="text-xs font-semibold text-[#1C1917]">City</label>
                   <input
@@ -138,7 +139,18 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                   />
                 </div>
                 <div className="space-y-1">
-                  <label htmlFor="checkout-postal-code" className="text-xs font-semibold text-[#1C1917]">Postal Code</label>
+                  <label htmlFor="checkout-state" className="text-xs font-semibold text-[#1C1917]">State</label>
+                  <input
+                    id="checkout-state"
+                    type="text"
+                    required
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                    className="w-full text-xs px-3.5 py-2.5 bg-white border border-[#D8CEBE] focus:outline-none focus:border-[#1C1917]"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label htmlFor="checkout-postal-code" className="text-xs font-semibold text-[#1C1917]">PIN Code</label>
                   <input
                     id="checkout-postal-code"
                     type="text"
@@ -154,9 +166,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                     id="checkout-country"
                     type="text"
                     required
+                    disabled
                     value={country}
-                    onChange={(e) => setCountry(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2.5 bg-white border border-[#D8CEBE] focus:outline-none focus:border-[#1C1917]"
+                    className="w-full text-xs px-3.5 py-2.5 bg-[#F4F0EA] border border-[#D8CEBE] text-[#78716C] focus:outline-none"
                   />
                 </div>
               </div>
@@ -165,26 +177,28 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
             {/* Payment Method */}
             <div className="space-y-3 pt-4 border-t border-[#EAE4DC]">
               <span className="text-[11px] tracking-[0.2em] uppercase font-semibold text-[#1C1917] block">
-                03. Payment Preference
+                03. Indian Payment Methods
               </span>
 
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                 {[
-                  { id: 'card', label: 'Credit Card' },
-                  { id: 'apple', label: 'Apple Pay' },
-                  { id: 'concierge', label: 'Atelier Invoicing' },
+                  { id: 'upi', label: 'UPI / QR', sub: 'GPay, PhonePe, Paytm' },
+                  { id: 'card', label: 'Cards', sub: 'RuPay, Visa, Amex' },
+                  { id: 'netbanking', label: 'NetBanking', sub: 'All Indian Banks' },
+                  { id: 'cod', label: 'White-Glove COD', sub: 'Pay on Delivery' },
                 ].map((pm) => (
                   <button
                     key={pm.id}
                     type="button"
                     onClick={() => setPaymentMethod(pm.id as any)}
-                    className={`py-3 px-3 text-center border text-xs tracking-wider uppercase font-semibold transition-all cursor-pointer ${
+                    className={`py-2.5 px-2 text-center border transition-all cursor-pointer ${
                       paymentMethod === pm.id
-                        ? 'border-[#1C1917] bg-[#1C1917] text-white'
-                        : 'border-[#EAE4DC] hover:border-[#C5A880] text-[#57534E]'
+                        ? 'border-[#1C1917] bg-[#1C1917] text-white shadow-xs'
+                        : 'border-[#EAE4DC] hover:border-[#C5A880] text-[#57534E] bg-white'
                     }`}
                   >
-                    {pm.label}
+                    <span className="block text-xs uppercase font-semibold tracking-wider">{pm.label}</span>
+                    <span className="block text-[10px] text-[#A8A29E] mt-0.5">{pm.sub}</span>
                   </button>
                 ))}
               </div>
@@ -207,7 +221,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
 
               <div className="flex items-center justify-center gap-2 text-[10px] text-[#78716C]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#9E8055]" />
-                <span>256-bit Encrypted SSL · Guaranteed Authenticity from Grasse Atelier</span>
+                <span>GST Compliant Invoice · Complimentary Insured Pan-India Express Delivery</span>
               </div>
             </div>
           </form>

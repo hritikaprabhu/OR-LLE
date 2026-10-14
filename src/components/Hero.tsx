@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Compass, FlaskConical, Gift } from 'lucide-react';
+import { ArrowRight, Compass, FlaskConical, Gift, Ticket } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (tab: string) => void;
@@ -15,9 +15,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="lg:col-span-6 space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#9E8055] font-semibold">
-                <span>The Modern Fragrance House</span>
+                <span>Haute Parfumerie · India Atelier</span>
                 <span aria-hidden="true">·</span>
-                <span>Grasse & Paris</span>
+                <span>Kannauj & Grasse Heritage</span>
               </div>
 
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1C1917] font-normal leading-[1.1] tracking-tight text-balance">
@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </h1>
 
               <p className="text-base sm:text-lg text-[#57534E] font-light leading-relaxed max-w-xl text-balance">
-                Designed for those who refuse to smell like the crowd. Discover your true signature scent through our interactive consultation, blend your own bespoke formulation in our digital atelier, or craft a personalized luxury hamper.
+                Designed for those who refuse to smell like the crowd. Discover your true signature scent through our interactive consultation, blend your bespoke formulation in our digital lab, craft custom hampers, or join our hands-on workshops across India.
               </p>
             </div>
 
@@ -47,39 +47,50 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </button>
             </div>
 
-            {/* Quick Interactive Pathway Strips */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#EAE4DC]">
+            {/* Quick Interactive Pathway Strips (4 pathways) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-[#EAE4DC]">
               <button
                 onClick={() => onNavigate('scent-finder')}
                 className="text-left group cursor-pointer focus:outline-none"
               >
-                <div className="flex items-center gap-2 text-[#9E8055] mb-1">
-                  <Compass className="w-4 h-4 transition-transform group-hover:scale-110" />
-                  <span className="text-[11px] tracking-widest uppercase font-semibold text-[#1C1917]">01. Scent Quiz</span>
+                <div className="flex items-center gap-1.5 text-[#9E8055] mb-1">
+                  <Compass className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+                  <span className="text-[10px] tracking-widest uppercase font-semibold text-[#1C1917]">01. Scent Quiz</span>
                 </div>
-                <p className="text-[12px] text-[#78716C] leading-snug">Personality & mood profiling</p>
+                <p className="text-[11px] text-[#78716C] leading-snug">Personality profiling</p>
               </button>
 
               <button
                 onClick={() => onNavigate('perfume-lab')}
                 className="text-left group cursor-pointer focus:outline-none"
               >
-                <div className="flex items-center gap-2 text-[#9E8055] mb-1">
-                  <FlaskConical className="w-4 h-4 transition-transform group-hover:scale-110" />
-                  <span className="text-[11px] tracking-widest uppercase font-semibold text-[#1C1917]">02. Create</span>
+                <div className="flex items-center gap-1.5 text-[#9E8055] mb-1">
+                  <FlaskConical className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+                  <span className="text-[10px] tracking-widest uppercase font-semibold text-[#1C1917]">02. Create</span>
                 </div>
-                <p className="text-[12px] text-[#78716C] leading-snug">Blend notes & name your bottle</p>
+                <p className="text-[11px] text-[#78716C] leading-snug">Blend custom flacon</p>
               </button>
 
               <button
                 onClick={() => onNavigate('hamper-builder')}
                 className="text-left group cursor-pointer focus:outline-none"
               >
-                <div className="flex items-center gap-2 text-[#9E8055] mb-1">
-                  <Gift className="w-4 h-4 transition-transform group-hover:scale-110" />
-                  <span className="text-[11px] tracking-widest uppercase font-semibold text-[#1C1917]">03. Hampers</span>
+                <div className="flex items-center gap-1.5 text-[#9E8055] mb-1">
+                  <Gift className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+                  <span className="text-[10px] tracking-widest uppercase font-semibold text-[#1C1917]">03. Hampers</span>
                 </div>
-                <p className="text-[12px] text-[#78716C] leading-snug">Bespoke gifting with wax seals</p>
+                <p className="text-[11px] text-[#78716C] leading-snug">Wax-sealed gifting</p>
+              </button>
+
+              <button
+                onClick={() => onNavigate('workshops')}
+                className="text-left group cursor-pointer focus:outline-none"
+              >
+                <div className="flex items-center gap-1.5 text-[#9E8055] mb-1">
+                  <Ticket className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+                  <span className="text-[10px] tracking-widest uppercase font-semibold text-[#1C1917]">04. Workshops</span>
+                </div>
+                <p className="text-[11px] text-[#78716C] leading-snug">Mumbai & Delhi ateliers</p>
               </button>
             </div>
           </div>

@@ -27,36 +27,36 @@ export const BrandStory: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <div className="text-xs tracking-[0.25em] uppercase text-[#9E8055] font-semibold">
-              The ORÉLLE Manifesto
+              The ORÉLLE Manifesto · India & Grasse
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1C1917] font-normal leading-tight">
               A rebellion against mass-market uniformity.
             </h2>
             <div className="space-y-4 text-sm sm:text-base text-[#57534E] font-light leading-relaxed">
               <p>
-                Founded on the belief that scent is your most intimate signature, ORÉLLE brings haute French perfumery into modern, self-expressive culture. We rejected generic department store counters and synthetic fillers.
+                Founded on the belief that scent is your most intimate signature, ORÉLLE bridges India&apos;s 4,000-year sacred attar distillation heritage with modern French precision and clean minimalist aesthetics.
               </p>
               <p>
-                Every ORÉLLE fragrance is formulated with organically cultivated botanicals harvested at dawn in Grasse, aged in French oak vats, and hand-bottled in sustainable crystal flacons crowned with magnetic champagne gold closures.
+                Every ORÉLLE creation harmonizes legendary Indian terroirs—baked clay Mitti Attar and Damascena roses from Kannauj, royal Santalum album from Mysore, wild-harvested agarwood from Assam, and Ruh Khus vetiver—with morning harvests from Grasse and Calabrian citrus.
               </p>
               <p>
-                Whether discovering your signature aura through our diagnostic engine or formulating an original blend in our digital atelier, ORÉLLE is an invitation to wear your truth.
+                Whether discovering your signature aura through our diagnostic engine, formulating an original blend in our digital lab, or joining a live masterclass in Mumbai or Delhi, ORÉLLE is an invitation to wear your truth.
               </p>
             </div>
 
             {/* Unboxed Brand Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#EAE4DC]">
               <div className="space-y-1">
-                <span className="font-serif text-2xl text-[#1C1917]">Grasse</span>
-                <p className="text-xs text-[#78716C]">Sustainably harvested night jasmine & Damask rose.</p>
+                <span className="font-serif text-2xl text-[#1C1917]">Kannauj</span>
+                <p className="text-xs text-[#78716C]">Sacred Deg-Bhapka hydro-distilled roses & baked earth.</p>
               </div>
               <div className="space-y-1">
-                <span className="font-serif text-2xl text-[#1C1917]">100%</span>
-                <p className="text-xs text-[#78716C]">Cruelty-free, vegan & free from synthetic phthalates.</p>
+                <span className="font-serif text-2xl text-[#1C1917]">Mysore & Assam</span>
+                <p className="text-xs text-[#78716C]">Government-certified royal sandalwood & aged wild agarwood.</p>
               </div>
               <div className="space-y-1">
-                <span className="font-serif text-2xl text-[#1C1917]">Refillable</span>
-                <p className="text-xs text-[#78716C]">Recyclable crystal flacons engineered to endure.</p>
+                <span className="font-serif text-2xl text-[#1C1917]">Clean & Refillable</span>
+                <p className="text-xs text-[#78716C]">100% vegan, cruelty-free crystal flacons with refills.</p>
               </div>
             </div>
           </div>
@@ -126,18 +126,19 @@ export const BrandStory: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-[#F4F0EA] p-8 sm:p-12 border border-[#EAE4DC]">
           <div className="lg:col-span-5 space-y-4">
             <span className="text-[11px] tracking-[0.2em] uppercase text-[#9E8055] font-semibold">
-              Private Fragrance Concierge
+              Private Fragrance Concierge · India
             </span>
             <h3 className="font-serif text-3xl text-[#1C1917]">
-              Have a question or custom gifting request?
+              Have a question or bespoke fragrance request?
             </h3>
             <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
-              Our scent curators in Paris and Grasse are available for bespoke event hampers, corporate gifting suites, or personalized perfume formulations.
+              Our master scent curators in Mumbai and New Delhi are available for bespoke event hampers, wedding trousseau gifting, workshop inquiries, and personalized formulation consultations.
             </p>
             <div className="text-xs text-[#78716C] space-y-1.5 pt-2 font-mono">
-              <div>Atelier: 18 Place Vendôme, 75001 Paris</div>
-              <div>Grasse Studio: Route des Fleurs, 06130 Grasse</div>
-              <div>Direct: concierge@orelle-parfum.com</div>
+              <div>Mumbai Atelier: Colaba Heritage Precinct, Mumbai 400001</div>
+              <div>Delhi Suite: The Chanakya Arcade, Chanakyapuri, New Delhi 110021</div>
+              <div>Bengaluru Studio: Lavelle Road, Shanthala Nagar, Bengaluru 560001</div>
+              <div>Direct: concierge@orelle.in · +91 (0) 22 4589 7700</div>
             </div>
           </div>
 

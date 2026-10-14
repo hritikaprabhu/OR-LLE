@@ -124,12 +124,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   Customise Your Hamper
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('workshops')}
+                  className="hover:text-[#FAF8F5] text-[#C5A880] transition-colors flex items-center gap-1.5"
+                >
+                  <span>Perfume Workshops & Masterclasses</span>
+                </button>
+              </li>
             </ul>
           </div>
 
           <div className="space-y-3">
             <div className="text-[11px] tracking-widest uppercase font-semibold text-[#FAF8F5]">
-              About & Values
+              Heritage & Atelier
             </div>
             <ul className="space-y-2">
               <li>
@@ -137,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('about')}
                   className="hover:text-[#FAF8F5] transition-colors"
                 >
-                  The Grasse Atelier
+                  Kannauj & Grasse Botanical Heritage
                 </button>
               </li>
               <li>
@@ -161,27 +169,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           <div className="space-y-3">
             <div className="text-[11px] tracking-widest uppercase font-semibold text-[#FAF8F5]">
-              Private Concierge
+              India Concierge
             </div>
             <div className="space-y-1 text-[#78716C] font-mono text-[11px]">
-              <p>concierge@orelle-parfum.com</p>
-              <p>+33 1 42 68 55 00</p>
-              <p>Monday–Saturday · 9am–7pm CET</p>
+              <p>concierge@orelle.in</p>
+              <p>+91 (0) 22 4589 7700</p>
+              <p>Monday–Saturday · 10am–8pm IST</p>
+              <p className="text-[10px] text-[#A8A29E] pt-1">Mumbai · Delhi · Bengaluru Ateliers</p>
             </div>
           </div>
         </div>
 
         {/* Quiet Bottom Copyright & Notice */}
         <div className="pt-8 border-t border-[#332F2C] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#78716C]">
-          <p>© 2026 ORÉLLE Parfumerie. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span>Paris</span>
+          <p>© 2026 ORÉLLE Haute Parfumerie India. All rights reserved.</p>
+          <div className="flex items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px]">
+            <span>Mumbai</span>
+            <span>·</span>
+            <span>New Delhi</span>
+            <span>·</span>
+            <span>Bengaluru</span>
+            <span>·</span>
+            <span>Kannauj</span>
             <span>·</span>
             <span>Grasse</span>
             <span>·</span>
-            <span>New York</span>
-            <span>·</span>
-            <span>Tokyo</span>
+            <span>Paris</span>
           </div>
         </div>
       </div>

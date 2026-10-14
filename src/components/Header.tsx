@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Sparkles, Compass, FlaskConical, Gift } from 'lucide-react';
+import { ShoppingBag, Menu, X, Sparkles, Compass, FlaskConical, Gift, Ticket } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#EAE4DC] transition-all">
       {/* Editorial Announcement Bar */}
       <div className="bg-[#1C1917] text-[#EFEBE4] text-[11px] py-1.5 px-4 text-center tracking-wider uppercase font-medium flex items-center justify-center gap-3">
-        <span>Complimentary 2-vial discovery set & gold-embossed gift box with every order</span>
+        <span>Complimentary Pan-India White-Glove Delivery · 2-Vial Discovery Set with Every Order</span>
         <span className="hidden sm:inline text-[#C5A880]">·</span>
         <span className="hidden sm:inline text-[#C5A880]">Code: ORELLE10 for 10% off</span>
       </div>
@@ -39,12 +39,12 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
             ORÉLLE
           </span>
           <span className="block text-[9px] tracking-[0.3em] uppercase text-[#8C827A] font-sans -mt-1">
-            Haute Parfumerie
+            Haute Parfumerie · India
           </span>
         </button>
 
-        {/* Zone 2: 4-5 Single-line Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-[13px] tracking-[0.12em] uppercase font-medium text-[#57534E]">
+        {/* Zone 2: Single-line Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-7 text-[12px] tracking-[0.12em] uppercase font-medium text-[#57534E]">
           <button
             onClick={() => handleNavClick('collection')}
             className={`transition-colors hover:text-[#1C1917] pb-1 border-b-2 ${
@@ -79,6 +79,15 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           >
             <Gift className="w-3.5 h-3.5 text-[#C5A880]" />
             Custom Hamper
+          </button>
+          <button
+            onClick={() => handleNavClick('workshops')}
+            className={`transition-colors hover:text-[#1C1917] pb-1 border-b-2 flex items-center gap-1.5 ${
+              activeTab === 'workshops' ? 'border-[#C5A880] text-[#1C1917]' : 'border-transparent'
+            }`}
+          >
+            <Ticket className="w-3.5 h-3.5 text-[#C5A880]" />
+            Workshops
           </button>
           <button
             onClick={() => handleNavClick('about')}
@@ -159,10 +168,19 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
               <Gift className="w-4 h-4 text-[#C5A880]" />
             </button>
             <button
+              onClick={() => handleNavClick('workshops')}
+              className={`text-left py-2 border-b border-[#F4F0EA] flex items-center justify-between ${
+                activeTab === 'workshops' ? 'text-[#9E8055]' : ''
+              }`}
+            >
+              <span>Perfume Workshops</span>
+              <Ticket className="w-4 h-4 text-[#C5A880]" />
+            </button>
+            <button
               onClick={() => handleNavClick('about')}
               className={`text-left py-2 border-b border-[#F4F0EA] ${activeTab === 'about' ? 'text-[#9E8055]' : ''}`}
             >
-              About ORÉLLE & Scent Atelier
+              About ORÉLLE & Indian Heritage
             </button>
           </div>
         </div>
